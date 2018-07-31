@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties("versionedMapping")
 public class VersionedMapping {
 
-  private List<Mapping> mappingList=new ArrayList<>();
+  private List<Mapping> mappingList = new ArrayList<>();
 
   public List<Mapping> getMappingList() {
     return mappingList;
@@ -19,7 +19,7 @@ public class VersionedMapping {
     this.mappingList = mappingList;
   }
 
-  public static class Mapping{
+  public static class Mapping {
     private String serviceName;
 
     private String version;

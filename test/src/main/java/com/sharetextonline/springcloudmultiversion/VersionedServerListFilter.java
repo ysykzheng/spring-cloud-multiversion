@@ -51,17 +51,17 @@ public class VersionedServerListFilter<T extends Server> extends
   private boolean filterServer(DiscoveryEnabledServer server) {
     InstanceInfo instanceInfo = server.getInstanceInfo();
     String appName = instanceInfo.getAppName();
-    System.out.println("appName="+appName);
-    if(this.versionedMapping.getMappingList().isEmpty()){
+    System.out.println("appName=" + appName);
+    if (this.versionedMapping.getMappingList().isEmpty()) {
       return true;
     }
     //不区分大小写
     Optional<Mapping> optionalMapping = this.versionedMapping.getMappingList()
-                                                   .stream()
-                                                   .filter(mapping -> StringUtils.equalsIgnoreCase(appName, mapping.getServiceName())).findFirst();
-    if(!optionalMapping.isPresent()){
+                                                             .stream()
+                                                             .filter(mapping -> StringUtils.equalsIgnoreCase(appName, mapping.getServiceName())).findFirst();
+    if (!optionalMapping.isPresent()) {
       return true;
-    }else {
+    } else {
       Mapping mapping = optionalMapping.get();
       List<String> versions = this.getInstanceVersions(instanceInfo);
       System.out.println(versions);

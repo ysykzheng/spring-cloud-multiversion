@@ -11,7 +11,7 @@ public class TestController {
   private UserClient userClient;
 
   @GetMapping("test")
-  public String test(){
+  public String test() {
     return userClient.test();
   }
 }
