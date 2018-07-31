@@ -1,4 +1,4 @@
-package com.sharetextonline.springcloudmultiversion;
+package com.rongyiapp.test;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,6 +8,6 @@ public class TestController {
 
   @GetMapping("test")
   public String test(){
-    return "test2\n";
+    return "test1\n";
   }
 }

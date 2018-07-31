@@ -16,13 +16,3 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
-app:
-  serviceId: test-user-server
-  version: v1
-
-versionedMapping:
-  mappingList:
-    - service-name: test-user-server
-      version: v2
-    - service-name: test-your-service
-      version: version-for-yours
