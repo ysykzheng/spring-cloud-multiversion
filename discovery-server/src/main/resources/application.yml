@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: test-eureka-server
+management:
+  security:
+    enabled: false
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    prefer-id-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+

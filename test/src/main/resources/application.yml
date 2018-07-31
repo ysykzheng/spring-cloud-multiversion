@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: test-server
+management:
+  security:
+    enabled: false
+
+server:
+  port: 8083
+
+eureka:
+  instance:
+    prefer-id-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+debug: true
+logging:
+  level: debug
+
+app:
+  serviceId: test-user-server
+  version: v1
