@@ -8,11 +8,11 @@ import org.springframework.context.annotation.Configuration;
 public class RibbonFilterConfiguration {
 
   @Autowired
-  private RibbonClientApi ribbonClientApi;
+  private VersionedMapping versionedMapping;
 
   @Bean
-  public VersionedFilter serverListFilter() {
-    VersionedFilter filter = new VersionedFilter(ribbonClientApi);
+  public VersionedServerListFilter serverListFilter() {
+    VersionedServerListFilter filter = new VersionedServerListFilter(versionedMapping);
     return filter;
   }
 

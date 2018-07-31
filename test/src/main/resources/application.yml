@@ -23,3 +23,8 @@ logging:
 app:
   serviceId: test-user-server
   version: v1
+
+versionedMapping:
+  mappingList:
+    - service-name: test-user-server
+      version: v2
