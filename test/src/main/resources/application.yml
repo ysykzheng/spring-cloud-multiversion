@@ -16,10 +16,6 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
-debug: true
-logging:
-  level: debug
-
 app:
   serviceId: test-user-server
   version: v1
